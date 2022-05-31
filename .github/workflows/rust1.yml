@@ -17,6 +17,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build
-      run: cargo ndk -t arm64-v8a -t armeabi-v7a -o ../src/jnjlib build --release
+      run: cargo run -t arm64-v8a -t armeabi-v7a -o ../src/jnjlib build --release
     - name: Run tests
       run: cargo test --verbose
