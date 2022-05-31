@@ -31,4 +31,13 @@ jobs:
     - name: Build with Gradle
       uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
       with:
-        arguments: cargoBuild
+        arguments: build
+     -name: Build Android release APK when create new tag
+      uses: kyze8439690/action-release-releaseapk@1.0.0
+     - name: Download a Build Artifact
+      uses: actions/download-artifact@v3.0.0
+  with:
+    # Artifact name
+    name: # optional
+    # Destination path
+    path: # optional
